@@ -8,7 +8,7 @@ function Navbar() {
 	const location = useLocation()
 
 	const pathMatchRoute = (route) => {
-		if (route == location.pathname) {
+		if (route === location.pathname) {
 			return true
 		}
 	}
@@ -47,7 +47,7 @@ function Navbar() {
 									: 'navbarListItemName'
 							}
 						>
-							Offer
+							Offers
 						</p>
 					</li>
 					<li className='navbarListItem'>
