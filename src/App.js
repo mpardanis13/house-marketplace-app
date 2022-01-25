@@ -10,6 +10,9 @@ import Explore from './pages/Explore'
 import Offers from './pages/Offers'
 import Profile from './pages/Profile'
 import CreateListing from './pages/CreateListing'
+import EditListing from './pages/EditListing'
+import Listing from './pages/Listing'
+import Contact from './pages/Contact'
 
 function App() {
 	return (
@@ -27,6 +30,13 @@ function App() {
 					<Route path='/sign-up' element={<Signup />} />
 					<Route path='/forgot-password' element={<ForgotPassword />} />
 					<Route path='/create-listing' element={<CreateListing />} />
+					<Route path='/edit-listing/:listingId' element={<EditListing />} />
+
+					<Route
+						path='/category/:categoryName/:listingId'
+						element={<Listing />}
+					/>
+					<Route path='/contact/:landlordId' element={<Contact />} />
 				</Routes>
 				<Navbar />
 			</Router>
